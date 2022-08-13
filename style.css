@@ -269,6 +269,7 @@ body{
   grid-template-rows: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
+ 
 }
 .yellowTask {
   display: grid;
@@ -360,4 +361,8 @@ body{
 .check{
   background-image: url(./thumbs1.jpg);
   background-repeat: no-repeat;
+}
+.complete{
+  display: flex;
+  height: max-content;
 }

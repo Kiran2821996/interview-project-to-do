@@ -192,14 +192,9 @@ form.addEventListener("submit", (e) => {
     edit_button.addEventListener("click", (e) => {
       if (edit_button.innerText == "\u{1F58A}") {
         edit_button.innerText = "\u{1F5AB}";
-        // task_input_element2.style.border = "2px solid black";
-        // task_input_element2.style.backgroundColor = "white";
         task_input_element2.removeAttribute("readonly");
       } else {
         edit_button.innerText = "\u{1F58A}";
-        // task_input_element2.style.border = "2px solid rgb(239,239,239)";
-        // task_input_element2.style.backgroundColor = "rgb(239,239,239)";
-        // edit_button.innerHTML = "<i class='fa-solid fa-pen'></i>"
         task_input_element2.setAttribute("readonly", "readonly");
       }
     });
@@ -219,10 +214,20 @@ form.addEventListener("submit", (e) => {
     });
 
     task_input_element1.addEventListener("click", (e) => {
+      
       comp.append(task_element);
+      
       delete_button.addEventListener("click", (e) => {
         comp.removeChild(task_element);
       });
+     
+      // lock.style.backgroundImage= "url(./lock-icon-11.jpg)"
+      internalDiv.removeChild(colour_buttonR)
+      internalDiv.removeChild(colour_buttonY)
+      internalDiv.removeChild(colour_buttonB)
+      internalDiv.removeChild(colour_buttonK)
+      internalDiv.classList.add("overlay2");
+      lock.classList.add("igg");
     });
     const modal1 = document.querySelector(".overlay1");
     btnCom.addEventListener("click", () => {
