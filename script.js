@@ -102,61 +102,9 @@ form.addEventListener("submit", (e) => {
     delete_button.innerText = "\u{1F5D1}";
     internalDiv.append(delete_button);
     ///////////////////////////////////////////////////
-    let colour_buttonR = document.createElement("button");
-    colour_buttonR.style.backgroundColor = "red";
-    colour_buttonR.addEventListener("click", () => {
-      red.append(task_element);
-      if (task_element.classList.contains("task-element-y")) {
-        task_element.classList.replace("task-element-y", "task-element-r");
-      } else if (task_element.classList.contains("task-element-b")) {
-        task_element.classList.replace("task-element-b", "task-element-r");
-      } else if (task_element.classList.contains("task-element-k")) {
-        task_element.classList.replace("task-element-k", "task-element-r");
-      }
-    });
-    internalDiv.append(colour_buttonR);
-    let colour_buttonY = document.createElement("button");
-    colour_buttonY.style.backgroundColor = "yellow";
-    colour_buttonY.addEventListener("click", () => {
-      yellow.append(task_element);
-      if (task_element.classList.contains("task-element-r")) {
-        task_element.classList.replace("task-element-r", "task-element-y");
-      } else if (task_element.classList.contains("task-element-b")) {
-        task_element.classList.replace("task-element-b", "task-element-y");
-      } else if (task_element.classList.contains("task-element-k")) {
-        task_element.classList.replace("task-element-k", "task-element-y");
-      }
-    });
-    internalDiv.append(colour_buttonY);
-    let colour_buttonB = document.createElement("button");
-    colour_buttonB.style.backgroundColor = "blue";
-    colour_buttonB.addEventListener("click", () => {
-      blue.append(task_element);
-      if (task_element.classList.contains("task-element-r")) {
-        task_element.classList.replace("task-element-r", "task-element-b");
-      } else if (task_element.classList.contains("task-element-y")) {
-        task_element.classList.replace("task-element-y", "task-element-b");
-      } else if (task_element.classList.contains("task-element-k")) {
-        task_element.classList.replace("task-element-k", "task-element-b");
-      }
-    });
-    internalDiv.append(colour_buttonB);
-    let colour_buttonK = document.createElement("button");
-    colour_buttonK.style.backgroundColor = "black";
-    colour_buttonK.addEventListener("click", () => {
-      black.append(task_element);
-      if (task_element.classList.contains("task-element-r")) {
-        task_element.classList.replace("task-element-r", "task-element-k");
-      } else if (task_element.classList.contains("task-element-y")) {
-        task_element.classList.replace("task-element-y", "task-element-k");
-      } else if (task_element.classList.contains("task-element-b")) {
-        task_element.classList.replace("task-element-b", "task-element-k");
-      }
-    });
-    internalDiv.append(colour_buttonK);
+   
     ///////////////////////////////////////////////////
 
-    label.append(internalDiv);
 
     let lock = document.createElement("button");
     // let modal2= document.querySelector(".overlay2")
@@ -166,7 +114,70 @@ form.addEventListener("submit", (e) => {
       internalDiv.classList.toggle("overlay2");
       lock.classList.toggle("igg");
     });
+////////////////////////////////////////////////////
+let colour_buttonR = document.createElement("button");
+colour_buttonR.style.backgroundColor = "red";
+colour_buttonR.addEventListener("click", () => {
+  red.append(task_element);
+  if (task_element.classList.contains("task-element-y")) {
+    task_element.classList.replace("task-element-y", "task-element-r");
+    
+  } else if (task_element.classList.contains("task-element-b")) {
+    task_element.classList.replace("task-element-b", "task-element-r");
+  } else if (task_element.classList.contains("task-element-k")) {
+    task_element.classList.replace("task-element-k", "task-element-r");
+  }
+  internalDiv.classList.add("overlay2");
+  lock.classList.add("igg");
+});
+internalDiv.append(colour_buttonR);
+let colour_buttonY = document.createElement("button");
+colour_buttonY.style.backgroundColor = "yellow";
+colour_buttonY.addEventListener("click", () => {
+  yellow.append(task_element);
+  if (task_element.classList.contains("task-element-r")) {
+    task_element.classList.replace("task-element-r", "task-element-y");
+  } else if (task_element.classList.contains("task-element-b")) {
+    task_element.classList.replace("task-element-b", "task-element-y");
+  } else if (task_element.classList.contains("task-element-k")) {
+    task_element.classList.replace("task-element-k", "task-element-y");
+  }
+  internalDiv.classList.add("overlay2");
+  lock.classList.add("igg");
+});
+internalDiv.append(colour_buttonY);
+let colour_buttonB = document.createElement("button");
+colour_buttonB.style.backgroundColor = "blue";
+colour_buttonB.addEventListener("click", () => {
+  blue.append(task_element);
+  if (task_element.classList.contains("task-element-r")) {
+    task_element.classList.replace("task-element-r", "task-element-b");
+  } else if (task_element.classList.contains("task-element-y")) {
+    task_element.classList.replace("task-element-y", "task-element-b");
+  } else if (task_element.classList.contains("task-element-k")) {
+    task_element.classList.replace("task-element-k", "task-element-b");
+  }
+  internalDiv.classList.add("overlay2");
+  lock.classList.add("igg");
+});
+internalDiv.append(colour_buttonB);
+let colour_buttonK = document.createElement("button");
+colour_buttonK.style.backgroundColor = "black";
+colour_buttonK.addEventListener("click", () => {
+  black.append(task_element);
+  if (task_element.classList.contains("task-element-r")) {
+    task_element.classList.replace("task-element-r", "task-element-k");
+  } else if (task_element.classList.contains("task-element-y")) {
+    task_element.classList.replace("task-element-y", "task-element-k");
+  } else if (task_element.classList.contains("task-element-b")) {
+    task_element.classList.replace("task-element-b", "task-element-k");
+  }
+  internalDiv.classList.add("overlay2");
+  lock.classList.add("igg");
+});
+internalDiv.append(colour_buttonK);
 
+    label.append(internalDiv);
     label.append(lock);
     task_element.append(label);
     // red.append(task_element)
