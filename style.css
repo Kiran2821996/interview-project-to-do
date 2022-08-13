@@ -1,0 +1,363 @@
+body{
+  background-color:rgb(149,155,155) ;
+}
+.header {
+  /* width: 100%;
+    height: 500px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(178, 175, 131);
+  padding: 20px;
+}
+.left button {
+  width: 50px;
+  height: 50px;
+  transition: 900ms;
+}
+.left button:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 900ms;
+}
+.right {
+  margin-right: 20px;
+}
+.all {
+  background-image: linear-gradient(red, yellow, blue, black);
+}
+
+.completed {
+  margin-right: 63%;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(178, 175, 131);
+  border: none;
+}
+.completed:hover {
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.createTask {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(230, 160, 30);
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: italic;
+  transition: 900ms;
+}
+.createTask:hover {
+  background-color: white;
+  color: black;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: 900ms;
+}
+.myForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(91, 94, 93);
+  /* position: absolute;
+    top: 35%;
+    right: 35%; */
+  width: 30%;
+  height: 30%;
+  border: 5px dotted black;
+
+  /* visibility: hidden; */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.overlay1 {
+  visibility: hidden;
+}
+.open-modal1 {
+  visibility: visible;
+}
+.overlay2 {
+ 
+  visibility: hidden;
+}
+
+.fInput {
+  /* width: 100%; */
+  height: 70%;
+  resize: none;
+  border: none;
+  background-color: cadetblue;
+  color: white;
+  font-size: xx-large;
+  padding: 30px;
+  /* border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%; */
+}
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50%;
+  height: 36px;
+  background-color: rgb(201, 63, 47);
+  font-size: large;
+  font-weight: bolder;
+  border: 2px solid black;
+}
+.close:hover {
+  cursor: pointer;
+
+  color: black;
+  background-color: white;
+}
+.submit {
+  width: 50%;
+  height: 40px;
+  background-color: rgb(135, 222, 136);
+  font-size: large;
+  font-weight: bolder;
+}
+.submit:hover {
+  cursor: pointer;
+
+  color: black;
+  background-color: white;
+}
+.frBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dr {
+  background-color: red;
+  margin-bottom: 10px;
+  height: 30px;
+  text-align: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.dy {
+  background-color: yellow;
+  margin-bottom: 10px;
+  height: 30px;
+  text-align: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.db {
+  background-color: blue;
+  margin-bottom: 10px;
+  height: 30px;
+  text-align: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.dk {
+  background-color: black;
+  margin-bottom: 10px;
+  height: 30px;
+  text-align: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.ra {
+  padding: 30px;
+}
+.btForm {
+  /* padding: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+ 
+  background-color: yellow;
+}
+.blue {
+  background-color: blue;
+}
+.black {
+  background-color: black;
+}
+.task-element-r {
+  /* display: flex;
+  justify-content: space-between; */
+  width: 80%;
+  height: 70%;
+  background-color: rgba(255, 0, 0, 0.551);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20%;
+  border: 3px solid red;
+}
+.task-element-r:hover {
+  border: 3px solid white;
+  background-color: red;
+}
+.task-element-y {
+  width: 80%;
+  height: 70%;
+  background-color: rgba(255, 255, 0, 0.535);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20%;
+  border: 3px solid yellow;
+}
+.task-element-y:hover {
+  border: 3px solid white;
+  background-color: yellow;
+}
+.task-element-b {
+  width: 80%;
+  height: 70%;
+  background-color: rgba(0, 0, 255, 0.506);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20% ;
+  border: 3px solid blue;
+}
+.task-element-b:hover {
+  border: 3px solid white;
+  background-color: blue;
+}
+.task-element-k {
+  width: 80%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.197);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20% ;
+  border: 3px solid black;
+}
+.task-element-k:hover {
+  border: 3px solid white;
+  background-color: black;
+}
+/* .tasks{
+ display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+} */
+.redTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.yellowTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.blueTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.blackTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.tasks {
+  padding: 50px;
+  display: flex;
+  background-color: rgb(149, 155, 155);
+  justify-content: space-between;
+}
+
+.in {
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  resize: none;
+  border-radius: 5px;
+  border: none;
+  color: black;
+
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.task-element-r .in:hover {
+  background-color: red;
+}
+.task-element-y .in:hover {
+  background-color: yellow;
+}
+.task-element-b .in:hover {
+  background-color: blue;
+
+  color: white;
+}
+.task-element-k .in:hover {
+  background-color: black;
+
+  color: white;
+}
+.lock {
+  width: 52px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-image: url(./lock-icon-12.jpg);
+  background-repeat: no-repeat;
+ 
+}
+.igg{
+  background-image: url(./lock-icon-11.jpg);
+}
+.internalDiv{
+  display: flex;
+  justify-content: space-evenly;
+  /* width: 400px; */
+}
+.internalDiv button{
+  font-size: xx-large;
+ 
+  font-weight: bolder;
+  
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+}
+.internalDiv button:hover{
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 10px 5px 10px;
+}
+.check{
+  background-image: url(./thumbs1.jpg);
+  background-repeat: no-repeat;
+}
