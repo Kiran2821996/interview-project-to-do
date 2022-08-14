@@ -1,3 +1,4 @@
+////////////////////////////////--------------GLOBAL_VAR----------//////////////////////
 const btnA = document.querySelector(".all");
 const btnR = document.querySelector(".red");
 const btnY = document.querySelector(".yellow");
@@ -19,6 +20,7 @@ const fYellow = document.querySelector(".fYellow");
 const fBlue = document.querySelector(".fBlue");
 const fBlack = document.querySelector(".fBlack");
 
+////////////////////////////////////--------------ADD_TASK-------------------///////////////////////////////////////////////////
 const btnForm = document.querySelector(".createTask");
 const modal = document.querySelector(".overlay");
 btnForm.addEventListener("click", () => {
@@ -29,56 +31,55 @@ const closeBtn = document.querySelector(".close");
 closeBtn.addEventListener("click", function (e) {
   modal.classList.remove("open-modal");
 });
-// const copbtn = document.querySelector(".completed")
-
+///////////////////////////////////////---------------FILTER---------------------////////////////////////////////////////////////
 btnA.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(red);
   container.append(yellow);
   container.append(blue);
   container.append(black);
-  if(red.classList.contains("redTaskRe")){
-    red.classList.replace("redTaskRe","redTask")
+  if (red.classList.contains("redTaskRe")) {
+    red.classList.replace("redTaskRe", "redTask");
   }
-  if(yellow.classList.contains("yellowTaskRe")){
-    yellow.classList.replace("yellowTaskRe","yellowTask")
+  if (yellow.classList.contains("yellowTaskRe")) {
+    yellow.classList.replace("yellowTaskRe", "yellowTask");
   }
-  if(blue.classList.contains("blueTaskRe")){
-    blue.classList.replace("blueTaskRe","blueTask")
+  if (blue.classList.contains("blueTaskRe")) {
+    blue.classList.replace("blueTaskRe", "blueTask");
   }
-  if(black.classList.contains("blackTaskRe")){
-    black.classList.replace("blackTaskRe","blackTask")
+  if (black.classList.contains("blackTaskRe")) {
+    black.classList.replace("blackTaskRe", "blackTask");
   }
 });
 btnR.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(red);
-  if(red.classList.contains("redTask")){
-    red.classList.replace("redTask","redTaskRe")
+  if (red.classList.contains("redTask")) {
+    red.classList.replace("redTask", "redTaskRe");
   }
 });
 btnY.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(yellow);
-  if(yellow.classList.contains("yellowTask")){
-    yellow.classList.replace("yellowTask","yellowTaskRe")
+  if (yellow.classList.contains("yellowTask")) {
+    yellow.classList.replace("yellowTask", "yellowTaskRe");
   }
 });
 btnB.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(blue);
-  if(blue.classList.contains("blueTask")){
-    blue.classList.replace("blueTask","blueTaskRe")
+  if (blue.classList.contains("blueTask")) {
+    blue.classList.replace("blueTask", "blueTaskRe");
   }
 });
 btnK.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(black);
-  if(black.classList.contains("blackTask")){
-    black.classList.replace("blackTask","blackTaskRe")
+  if (black.classList.contains("blackTask")) {
+    black.classList.replace("blackTask", "blackTaskRe");
   }
 });
-
+/////////////////////////////////////////-----------FORM----------/////////////////////////////////////////////////
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let task = fInput.value;
@@ -91,51 +92,39 @@ form.addEventListener("submit", (e) => {
     let task_input_element1 = document.createElement("button");
     task_input_element1.classList.add("check");
 
-    // task_input_element1.type = "checkbox";
-    // task_input_element1.value = "checkbox";
-    // task_input_element1.setAttribute("onclick","if(this.div.checkbox.checked){alert('hai')}")
-
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("checkbox");
     task_input_element1.append(checkbox);
     internalDiv.append(task_input_element1);
-
-    /////////////////////////////////////////////////////////
+    ///////////////////////////////
     let label = document.createElement("label");
     label.htmlFor = "checkbox";
     let task_input_element2 = document.createElement("textarea");
     task_input_element2.classList.add("in");
-
     task_input_element2.type = "text";
     task_input_element2.value = task;
     task_input_element2.setAttribute("readonly", "readonly");
     label.append(task_input_element2);
-
-    ////////////////////////////////////////////////////////
+    //////////////--EDIT_BTN--////////////////
     let edit_button = document.createElement("button");
     edit_button.classList.add("edit");
     edit_button.innerText = "\u{1F58A}";
-    // edit_button.innerHTML = "<i class='fa-solid fa-pen'></i>";
     internalDiv.append(edit_button);
-    ////////////////////////////////////////////////
+    //////////////--DELETE_BTN--////////////////
     let delete_button = document.createElement("button");
     delete_button.classList.add("delete");
     delete_button.innerText = "\u{1F5D1}";
     internalDiv.append(delete_button);
-    ///////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////
-
+    /////////////--LOCK_BTN--/////////////////
     let lock = document.createElement("button");
-    // let modal2= document.querySelector(".overlay2")
     lock.classList.add("lock");
     lock.classList.add("igg");
     lock.addEventListener("click", () => {
       internalDiv.classList.toggle("overlay2");
       lock.classList.toggle("igg");
     });
-    ////////////////////////////////////////////////////
+    /////////////--COLOR_BTNS--//////////////////
     let colour_buttonR = document.createElement("button");
     colour_buttonR.style.backgroundColor = "red";
     colour_buttonR.addEventListener("click", () => {
@@ -200,7 +189,7 @@ form.addEventListener("submit", (e) => {
     label.append(internalDiv);
     label.append(lock);
     task_element.append(label);
-    // red.append(task_element)
+    ///////////////---ADD_ELEMENTS_TO_RESPECTIVE_DIVS////////////////////////
     if (document.querySelectorAll(".ra")[0].checked) {
       task_input_element2.classList.add("text1");
       task_element.classList.add("task-element-r");
@@ -218,8 +207,9 @@ form.addEventListener("submit", (e) => {
       task_input_element2.classList.add("text4");
       black.append(task_element);
     }
-
+    /////////////
     fInput.value = "";
+    /////////////---EDIT_FUNCTION
     edit_button.addEventListener("click", (e) => {
       if (edit_button.innerText == "\u{1F58A}") {
         edit_button.innerText = "\u{1F5AB}";
@@ -229,7 +219,7 @@ form.addEventListener("submit", (e) => {
         task_input_element2.setAttribute("readonly", "readonly");
       }
     });
-
+    ////////////---DELETE_FUNCTION
     delete_button.addEventListener("click", (e) => {
       if (task_input_element2.classList.contains("text1")) {
         red.removeChild(task_element);
@@ -243,22 +233,23 @@ form.addEventListener("submit", (e) => {
         comp.removeChild(task_element);
       }
     });
-
+    //////////////////////////////////////////---------COMPLETED---------///////////////////////////////////////////////////
     task_input_element1.addEventListener("click", (e) => {
       comp.append(task_element);
-
-      delete_button.addEventListener("click", (e) => {
-        comp.removeChild(task_element);
-      });
-
-      // lock.style.backgroundImage= "url(./lock-icon-11.jpg)"
       internalDiv.removeChild(colour_buttonR);
       internalDiv.removeChild(colour_buttonY);
       internalDiv.removeChild(colour_buttonB);
       internalDiv.removeChild(colour_buttonK);
+      internalDiv.removeChild(task_input_element1);
+      internalDiv.removeChild(edit_button);
       internalDiv.classList.add("overlay2");
       lock.classList.add("igg");
+////////////---DELETE_FUNCTION_IN_COMPLETE_TASK
+      delete_button.addEventListener("click", (e) => {
+        comp.removeChild(task_element);
+      });
     });
+    //////////////////////////////////////////////////////////////////////////////////
     const modal1 = document.querySelector(".overlay1");
     btnCom.addEventListener("click", () => {
       modal1.classList.add("open-modal1");
