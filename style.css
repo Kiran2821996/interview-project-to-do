@@ -62,8 +62,8 @@ body{
   /* position: absolute;
     top: 35%;
     right: 35%; */
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
   border: 5px dotted black;
 
   /* visibility: hidden; */
@@ -104,7 +104,7 @@ body{
   border: none;
   background-color: cadetblue;
   color: white;
-  font-size: xx-large;
+  font-size: 70px;
   padding: 30px;
   /* border-top-left-radius: 10%;
     border-bottom-left-radius: 10%; */
@@ -115,7 +115,7 @@ body{
   justify-content: center;
 
   width: 50%;
-  height: 36px;
+  height: 100px;
   background-color: rgb(201, 63, 47);
   font-size: large;
   font-weight: bolder;
@@ -129,7 +129,7 @@ body{
 }
 .submit {
   width: 50%;
-  height: 40px;
+  height: 105px;
   background-color: rgb(135, 222, 136);
   font-size: large;
   font-weight: bolder;
@@ -145,37 +145,45 @@ body{
   justify-content: space-around;
   align-items: center;
 }
+input[type="radio"] {
+
+  transform: scale(4.5);
+}
 .dr {
   background-color: red;
   margin-bottom: 10px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   text-align: center;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .dy {
   background-color: yellow;
   margin-bottom: 10px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   text-align: center;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .db {
   background-color: blue;
   margin-bottom: 10px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   text-align: center;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .dk {
   background-color: black;
   margin-bottom: 10px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   text-align: center;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .ra {
   padding: 30px;
@@ -203,7 +211,7 @@ body{
   /* display: flex;
   justify-content: space-between; */
   width: 80%;
-  height: 70%;
+  height: 50%;
   background-color: rgba(255, 0, 0, 0.551);
   padding: 50px;
   box-shadow: 5px 10px #3a3838;
@@ -217,7 +225,7 @@ body{
 }
 .task-element-y {
   width: 80%;
-  height: 70%;
+  height: 50%;
   background-color: rgba(255, 255, 0, 0.535);
   padding: 50px;
   box-shadow: 5px 10px #3a3838;
@@ -231,7 +239,7 @@ body{
 }
 .task-element-b {
   width: 80%;
-  height: 70%;
+  height: 50%;
   background-color: rgba(0, 0, 255, 0.506);
   padding: 50px;
   box-shadow: 5px 10px #3a3838;
@@ -245,7 +253,7 @@ body{
 }
 .task-element-k {
   width: 80%;
-  height: 70%;
+  height: 50%;
   background-color: rgba(0, 0, 0, 0.197);
   padding: 50px;
   box-shadow: 5px 10px #3a3838;
@@ -257,13 +265,7 @@ body{
   border: 3px solid white;
   background-color: black;
 }
-/* .tasks{
- display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 100px;
-} */
-.redTask {
+.redTask,.yellowTask, .blueTask,.blackTask {
   display: grid;
   grid-auto-flow: row;
   grid-template-rows: repeat(5, 1fr);
@@ -271,7 +273,14 @@ body{
   align-items: center;
  
 }
-.yellowTask {
+.redTaskRe,.yellowTaskRe,.blueTaskRe,.blackTaskRe{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 50px;
+}
+/* .yellowTask {
   display: grid;
   grid-auto-flow: row;
   grid-template-rows: repeat(5, 1fr);
@@ -291,7 +300,7 @@ body{
   grid-template-rows: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
-}
+} */
 .tasks {
   padding: 20px;
   display: flex;

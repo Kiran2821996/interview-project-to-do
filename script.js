@@ -37,22 +37,46 @@ btnA.addEventListener("click", () => {
   container.append(yellow);
   container.append(blue);
   container.append(black);
+  if(red.classList.contains("redTaskRe")){
+    red.classList.replace("redTaskRe","redTask")
+  }
+  if(yellow.classList.contains("yellowTaskRe")){
+    yellow.classList.replace("yellowTaskRe","yellowTask")
+  }
+  if(blue.classList.contains("blueTaskRe")){
+    blue.classList.replace("blueTaskRe","blueTask")
+  }
+  if(black.classList.contains("blackTaskRe")){
+    black.classList.replace("blackTaskRe","blackTask")
+  }
 });
 btnR.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(red);
+  if(red.classList.contains("redTask")){
+    red.classList.replace("redTask","redTaskRe")
+  }
 });
 btnY.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(yellow);
+  if(yellow.classList.contains("yellowTask")){
+    yellow.classList.replace("yellowTask","yellowTaskRe")
+  }
 });
 btnB.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(blue);
+  if(blue.classList.contains("blueTask")){
+    blue.classList.replace("blueTask","blueTaskRe")
+  }
 });
 btnK.addEventListener("click", () => {
   container.innerHTML = "";
   container.append(black);
+  if(black.classList.contains("blackTask")){
+    black.classList.replace("blackTask","blackTaskRe")
+  }
 });
 
 form.addEventListener("submit", (e) => {
@@ -66,8 +90,6 @@ form.addEventListener("submit", (e) => {
 
     let task_input_element1 = document.createElement("button");
     task_input_element1.classList.add("check");
-   
-    
 
     // task_input_element1.type = "checkbox";
     // task_input_element1.value = "checkbox";
@@ -102,9 +124,8 @@ form.addEventListener("submit", (e) => {
     delete_button.innerText = "\u{1F5D1}";
     internalDiv.append(delete_button);
     ///////////////////////////////////////////////////
-   
-    ///////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////
 
     let lock = document.createElement("button");
     // let modal2= document.querySelector(".overlay2")
@@ -114,68 +135,67 @@ form.addEventListener("submit", (e) => {
       internalDiv.classList.toggle("overlay2");
       lock.classList.toggle("igg");
     });
-////////////////////////////////////////////////////
-let colour_buttonR = document.createElement("button");
-colour_buttonR.style.backgroundColor = "red";
-colour_buttonR.addEventListener("click", () => {
-  red.append(task_element);
-  if (task_element.classList.contains("task-element-y")) {
-    task_element.classList.replace("task-element-y", "task-element-r");
-    
-  } else if (task_element.classList.contains("task-element-b")) {
-    task_element.classList.replace("task-element-b", "task-element-r");
-  } else if (task_element.classList.contains("task-element-k")) {
-    task_element.classList.replace("task-element-k", "task-element-r");
-  }
-  internalDiv.classList.add("overlay2");
-  lock.classList.add("igg");
-});
-internalDiv.append(colour_buttonR);
-let colour_buttonY = document.createElement("button");
-colour_buttonY.style.backgroundColor = "yellow";
-colour_buttonY.addEventListener("click", () => {
-  yellow.append(task_element);
-  if (task_element.classList.contains("task-element-r")) {
-    task_element.classList.replace("task-element-r", "task-element-y");
-  } else if (task_element.classList.contains("task-element-b")) {
-    task_element.classList.replace("task-element-b", "task-element-y");
-  } else if (task_element.classList.contains("task-element-k")) {
-    task_element.classList.replace("task-element-k", "task-element-y");
-  }
-  internalDiv.classList.add("overlay2");
-  lock.classList.add("igg");
-});
-internalDiv.append(colour_buttonY);
-let colour_buttonB = document.createElement("button");
-colour_buttonB.style.backgroundColor = "blue";
-colour_buttonB.addEventListener("click", () => {
-  blue.append(task_element);
-  if (task_element.classList.contains("task-element-r")) {
-    task_element.classList.replace("task-element-r", "task-element-b");
-  } else if (task_element.classList.contains("task-element-y")) {
-    task_element.classList.replace("task-element-y", "task-element-b");
-  } else if (task_element.classList.contains("task-element-k")) {
-    task_element.classList.replace("task-element-k", "task-element-b");
-  }
-  internalDiv.classList.add("overlay2");
-  lock.classList.add("igg");
-});
-internalDiv.append(colour_buttonB);
-let colour_buttonK = document.createElement("button");
-colour_buttonK.style.backgroundColor = "black";
-colour_buttonK.addEventListener("click", () => {
-  black.append(task_element);
-  if (task_element.classList.contains("task-element-r")) {
-    task_element.classList.replace("task-element-r", "task-element-k");
-  } else if (task_element.classList.contains("task-element-y")) {
-    task_element.classList.replace("task-element-y", "task-element-k");
-  } else if (task_element.classList.contains("task-element-b")) {
-    task_element.classList.replace("task-element-b", "task-element-k");
-  }
-  internalDiv.classList.add("overlay2");
-  lock.classList.add("igg");
-});
-internalDiv.append(colour_buttonK);
+    ////////////////////////////////////////////////////
+    let colour_buttonR = document.createElement("button");
+    colour_buttonR.style.backgroundColor = "red";
+    colour_buttonR.addEventListener("click", () => {
+      red.append(task_element);
+      if (task_element.classList.contains("task-element-y")) {
+        task_element.classList.replace("task-element-y", "task-element-r");
+      } else if (task_element.classList.contains("task-element-b")) {
+        task_element.classList.replace("task-element-b", "task-element-r");
+      } else if (task_element.classList.contains("task-element-k")) {
+        task_element.classList.replace("task-element-k", "task-element-r");
+      }
+      internalDiv.classList.add("overlay2");
+      lock.classList.add("igg");
+    });
+    internalDiv.append(colour_buttonR);
+    let colour_buttonY = document.createElement("button");
+    colour_buttonY.style.backgroundColor = "yellow";
+    colour_buttonY.addEventListener("click", () => {
+      yellow.append(task_element);
+      if (task_element.classList.contains("task-element-r")) {
+        task_element.classList.replace("task-element-r", "task-element-y");
+      } else if (task_element.classList.contains("task-element-b")) {
+        task_element.classList.replace("task-element-b", "task-element-y");
+      } else if (task_element.classList.contains("task-element-k")) {
+        task_element.classList.replace("task-element-k", "task-element-y");
+      }
+      internalDiv.classList.add("overlay2");
+      lock.classList.add("igg");
+    });
+    internalDiv.append(colour_buttonY);
+    let colour_buttonB = document.createElement("button");
+    colour_buttonB.style.backgroundColor = "blue";
+    colour_buttonB.addEventListener("click", () => {
+      blue.append(task_element);
+      if (task_element.classList.contains("task-element-r")) {
+        task_element.classList.replace("task-element-r", "task-element-b");
+      } else if (task_element.classList.contains("task-element-y")) {
+        task_element.classList.replace("task-element-y", "task-element-b");
+      } else if (task_element.classList.contains("task-element-k")) {
+        task_element.classList.replace("task-element-k", "task-element-b");
+      }
+      internalDiv.classList.add("overlay2");
+      lock.classList.add("igg");
+    });
+    internalDiv.append(colour_buttonB);
+    let colour_buttonK = document.createElement("button");
+    colour_buttonK.style.backgroundColor = "black";
+    colour_buttonK.addEventListener("click", () => {
+      black.append(task_element);
+      if (task_element.classList.contains("task-element-r")) {
+        task_element.classList.replace("task-element-r", "task-element-k");
+      } else if (task_element.classList.contains("task-element-y")) {
+        task_element.classList.replace("task-element-y", "task-element-k");
+      } else if (task_element.classList.contains("task-element-b")) {
+        task_element.classList.replace("task-element-b", "task-element-k");
+      }
+      internalDiv.classList.add("overlay2");
+      lock.classList.add("igg");
+    });
+    internalDiv.append(colour_buttonK);
 
     label.append(internalDiv);
     label.append(lock);
@@ -225,18 +245,17 @@ internalDiv.append(colour_buttonK);
     });
 
     task_input_element1.addEventListener("click", (e) => {
-      
       comp.append(task_element);
-      
+
       delete_button.addEventListener("click", (e) => {
         comp.removeChild(task_element);
       });
-     
+
       // lock.style.backgroundImage= "url(./lock-icon-11.jpg)"
-      internalDiv.removeChild(colour_buttonR)
-      internalDiv.removeChild(colour_buttonY)
-      internalDiv.removeChild(colour_buttonB)
-      internalDiv.removeChild(colour_buttonK)
+      internalDiv.removeChild(colour_buttonR);
+      internalDiv.removeChild(colour_buttonY);
+      internalDiv.removeChild(colour_buttonB);
+      internalDiv.removeChild(colour_buttonK);
       internalDiv.classList.add("overlay2");
       lock.classList.add("igg");
     });
